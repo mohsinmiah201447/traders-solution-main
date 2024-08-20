@@ -1,0 +1,70 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// ul.header-items {
+//   list-style-type: none;  /* Remove bullets */
+//   padding: 0;            /* Remove default padding */
+//   margin: 0;             /* Remove default margin */
+// }
+// ul.header-items {
+//   list-style-type: none;
+  
+// }
+
+
+
+.container {
+  max-width: 1000px;
+}
+
+.card-header {
+  background-color: #963091;
+  color:black;
+}
+
+.card-body {
+  background-color: rgb(209, 238, 222);
+}
+
+.col-md-4 {
+  color: #b301aa;
+}
+
+.form-label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  border: 1px solid #963091;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  transition: border-color 0.2s;
+}
+
+.btn-primary {
+  background-color: #963091;
+  border-color: #00d941;
+  &:hover {
+      background-color: #00d941;
+      border-color: #b301aa;
+  }
+}

@@ -1,0 +1,35 @@
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header text-center">
+    <h1>Permission Form</h1>
+</div>
+<div class="card-body p-5">
+    <form [formGroup]="permissionForm" (ngSubmit)="submitForm()">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" formControlName="name" placeholder="Name">
+        </div>
+
+        <div class="mb-3">
+            <label for="componentKey" class="form-label">Component Key</label>
+            <input type="text" class="form-control" id="componentKey" formControlName="componentKey"
+                placeholder="componentKey">
+        </div>
+
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea type="" class="form-control" id="description" formControlName="description"
+                placeholder="description">
+            </textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="category" class="form-label">Category</label>
+            <input type="text" class="form-control" id="category" formControlName="category" placeholder="category">
+        </div>
+
+        <button class="btn btn-primary btn-sm" type="submit">Submit</button>
+    </form>
+</div>
+</div>
+</div>

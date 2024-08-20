@@ -1,0 +1,87 @@
+/* Container and heading styles */
+// .container {
+//   max-width: 800px;
+//   margin: 0 auto;
+//   padding: 20px;
+// }
+
+h1 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+/* Form group styles */
+.form-group {
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+/* Label styles */
+label {
+  font-weight: 600;
+}
+
+/* Form control styles */
+// .form-control {
+//   border: 1px solid #ccc;
+//   border-radius: 5px;
+//   padding: 10px;
+//   width: 100%;
+//   transition: border-color 0.2s;
+
+//   &:focus {
+//     border-color: #007bff;
+//   }
+// }
+
+/* Textarea styles */
+textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* File input styles */
+.form-control-file {
+  border: 1px solid #963091;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  background-color: #f5f5f5;
+  transition: border-color 0.2s;
+
+  &:focus {
+    border-color: #007bff;
+  }
+}
+
+// /* Button styles */
+// .btn-primary {
+//   background-color: #007bff;
+//   color: #fff;
+//   border: none;
+//   border-radius: 5px;
+//   padding: 10px 20px;
+//   cursor: pointer;
+
+//   &:hover {
+//     background-color: #0056b3;
+//   }
+// }
+
+/* Adjust column widths for responsiveness */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  .col-md-6 {
+    flex: 0 0 calc(50% - 10px);
+    padding: 0 10px;
+  }
+
+  .col-md-12 {
+    flex: 0 0 100%;
+    padding: 0 10px;
+  }
+}

@@ -1,0 +1,412 @@
+<!-- <h1>Employee Form</h1>
+<form [formGroup]="employeeForm" (ngSubmit)="submitForm()">
+    <mat-grid-list cols="3" rowHeight="4:1">
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>First Name</mat-label>
+                    <input matInput formControlName="firstName" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="lastName" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Date of Birth</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="dateOfBirth">
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Gender</mat-label>
+                    <mat-select formControlName="gender">
+                        <mat-option value="male">Male</mat-option>
+                        <mat-option value="female">Female</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>National ID</mat-label>
+                    <input matInput type="nationalId" formControlName="nationalId" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" formControlName="email" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Phone</mat-label>
+                    <input matInput formControlName="phone" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Address</mat-label>
+                    <textarea matInput formControlName="address"></textarea>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Emergency Contact Name</mat-label>
+                    <textarea matInput formControlName="emergencyContactName"></textarea>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Emergency Contact</mat-label>
+                    <input matInput formControlName="emergencyContactPhone" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Hire Date</mat-label>
+                    <input matInput [matDatepicker]="picker1" formControlName="hireDate">
+                    <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1></mat-datepicker>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Designation</mat-label>
+                    <input matInput formControlName="designation" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Department</mat-label>
+                    <input matInput formControlName="department" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Manager</mat-label>
+                    <input matInput formControlName="manager" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Employee Status</mat-label>
+                    <input matInput formControlName="employeeStatus" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Salary</mat-label>
+                    <input matInput type="number" formControlName="salary" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Pay Frequency</mat-label>
+                    <input matInput formControlName="payFrequency" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Pay Rate</mat-label>
+                    <input matInput type="text" formControlName="payRate" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                <mat-label>Health Insurance</mat-label>
+                <input matInput formControlName="healthInsurance" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Retirement Plans</mat-label>
+                    <input matInput formControlName="retirementPlans" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Other Benefits</mat-label>
+                    <textarea matInput formControlName="otherBenefits"></textarea>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Performance Reviews</mat-label>
+                    <textarea matInput formControlName="performanceReviews"></textarea>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Training Records</mat-label>
+                    <textarea matInput formControlName="trainingRecords"></textarea>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Certifications</mat-label>
+                    <textarea matInput formControlName="certifications"></textarea>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Termination Date</mat-label>
+                    <input matInput [matDatepicker]="picker2" formControlName="terminationDate">
+                    <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+                    <mat-datepicker #picker2></mat-datepicker>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Reason for Termination</mat-label>
+                    <textarea matInput formControlName="reasonForTermination"></textarea>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Team</mat-label>
+                    <input matInput formControlName="team" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form> -->
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header text-center">
+            <h1>Employee Form</h1>
+        </div>
+        <div class="card-body p-5">
+            <form [formGroup]="employeeForm" (ngSubmit)="submitForm()">
+                <div class="row">
+                    <div class="col">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstName" formControlName="firstName">
+                    </div>
+                    <div class="col">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" formControlName="lastName">
+                    </div>
+                    <div class="col">
+                        <label for="dateOfBirth" class="form-label">Date of Birth</label>
+                        <input type="date" class="form-control" id="dateOfBirth" formControlName="dateOfBirth">
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col">
+                        <label for="gender" class="form-label">Gender</label>
+                        <select class="form-select" formControlName="gender" id="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="nationalId" class="form-label">National ID</label>
+                        <input type="number" class="form-control" id="nationalId" formControlName="nationalId">
+                    </div>
+
+                    <div class="col">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" formControlName="email">
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input type="text" class="form-control" id="phone" formControlName="phone">
+                    </div>
+                    <div class="col">
+                        <label for="address" class="form-label">Address</label>
+                        <textarea class="form-control" id="address" formControlName="address"></textarea>
+                    </div>
+                    <div class="col">
+                        <label for="emergencyContactName" class="form-label">Emergency Contact Name</label>
+                        <textarea class="form-control" id="emergencyContactName"
+                            formControlName="emergencyContactName"></textarea>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col">
+                        <label for="emergencyContactPhone" class="form-label">Emergency Contact Phone</label>
+                        <input type="text" class="form-control" id="emergencyContactPhone"
+                            formControlName="emergencyContactPhone">
+                    </div>
+                    <div class="col">
+                        <label for="hireDate" class="form-label">Hire Date</label>
+                        <input type="date" class="form-control" id="hireDate" formControlName="hireDate">
+                    </div>
+                    <div class="col">
+                        <label for="designation" class="form-label">Designation</label>
+                        <select class="form-select" formControlName="designation" id="designation">
+                            <option value="admin">Admin</option>
+                            <option value="sells">Sells</option>
+                            <option value="dellar">Dellar</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col">
+                        <label for="department" class="form-label">Department</label>
+                        <input type="text" class="form-control" id="department" formControlName="department">
+                    </div>
+                    <div class="col">
+                        <label for="manager" class="form-label">Manager</label>
+                        <input type="text" class="form-control" id="manager" formControlName="manager">
+                    </div>
+                    <div class="col">
+                        <label for="employeeStatus" class="form-label">Employee Status</label>
+                        <input type="text" class="form-control" id="employeeStatus" formControlName="employeeStatus">
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col">
+                        <label for="salary" class="form-label">Salary</label>
+                        <input type="number" class="form-control" id="salary" formControlName="salary">
+                    </div>
+                    <div class="col">
+                        <label for="payFrequency" class="form-label">Pay Frequency</label>
+                        <input type="text" class="form-control" id="payFrequency" formControlName="payFrequency">
+                    </div>
+                    <div class="col">
+                        <label for="payRate" class="form-label">Pay Rate</label>
+                        <input type="number" class="form-control" id="payRate" formControlName="payRate">
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col">
+                        <label for="healthInsurance" class="form-label">Health Insurance</label>
+                        <input type="text" class="form-control" id="healthInsurance" formControlName="healthInsurance">
+                    </div>
+                    <div class="col">
+                        <label for="retirementPlans" class="form-label">Retirement Plans</label>
+                        <input type="text" class="form-control" id="retirementPlans" formControlName="retirementPlans">
+                    </div>
+                    <div class="col">
+                        <label for="otherBenefits" class="form-label">Other Benefits</label>
+                        <textarea class="form-control" id="otherBenefits" formControlName="otherBenefits"></textarea>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col">
+                        <label for="performanceReviews" class="form-label">Performance Reviews</label>
+                        <textarea class="form-control" id="performanceReviews"
+                            formControlName="performanceReviews"></textarea>
+                    </div>
+                    <div class="col">
+                        <label for="trainingRecords" class="form-label">Training Records</label>
+                        <textarea class="form-control" id="trainingRecords"
+                            formControlName="trainingRecords"></textarea>
+                    </div>
+                    <div class="col">
+                        <label for="certifications" class="form-label">Certifications</label>
+                        <textarea class="form-control" id="certifications" formControlName="certifications"></textarea>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col">
+                        <label for="terminationDate" class="form-label">Termination Date</label>
+                        <input type="date" class="form-control" id="terminationDate" formControlName="terminationDate">
+                    </div>
+                    <div class="col">
+                        <label for="reasonForTermination" class="form-label">Reason for Termination</label>
+                        <textarea class="form-control" id="reasonForTermination"
+                            formControlName="reasonForTermination"></textarea>
+                    </div>
+                    <div class="col">
+                        <label for="team" class="form-label">Team</label>
+                        <input type="text" class="form-control" id="team" formControlName="team">
+                    </div>
+                </div>
+
+                <button class="btn btn-primary mt-4" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

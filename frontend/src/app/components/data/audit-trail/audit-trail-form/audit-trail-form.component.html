@@ -1,0 +1,140 @@
+<!-- <h1>AuditTrail Form</h1>
+<form [formGroup]="audittrailForm" (ngSubmit)="submitForm()">
+  <mat-grid-list cols="3" rowHeight="4:1">
+    <mat-grid-tile>
+      <div class="input-container">
+        <mat-form-field>
+          <mat-label>timestamp</mat-label>
+          <input matInput formControlName="timestamp" />
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div class="input-container">
+        <mat-form-field>
+          <mat-label>actionEventType</mat-label>
+          <input matInput formControlName="actionEventType" />
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div class="input-container">
+        <mat-form-field>
+          <mat-label>userSystem</mat-label>
+          <input matInput formControlName="userSystem" />
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <div class="input-container">
+        <mat-form-field>
+          <mat-label>affectedEntity</mat-label>
+          <textarea matInput formControlName="affectedEntity"></textarea>
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div class="input-container">
+        <mat-form-field>
+          <mat-label>iPAddress</mat-label>
+          <input matInput formControlName="iPAddress" />
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div class="input-container">
+        <mat-form-field>
+          <mat-label>userAgent</mat-label>
+          <input matInput formControlName="userAgent" />
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <div class="input-container">
+        <mat-form-field>
+          <mat-label>statusOutcome</mat-label>
+          <input matInput formControlName="statusOutcome" />
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <div class="input-container">
+        <mat-form-field>
+          <mat-label>additionalMetadata</mat-label>
+          <input matInput formControlName="additionalMetadata" />
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <button mat-raised-button color="primary" type="submit">Submit</button>
+</form> -->
+
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-header text-center">
+      <h1>AuditTrail Form</h1>
+    </div>
+    <div class="card-body p-5">
+      <form [formGroup]="audittrailForm" (ngSubmit)="submitForm()">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="timestamp" class="form-label" >Timestamp</label>
+              <input type="text" class="form-control" id="timestamp" formControlName="timestamp">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="actionEventType" class="form-label">Action Event Type</label>
+              <input type="text" class="form-control" id="actionEventType" formControlName="actionEventType">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="userSystem" class="form-label">User System</label>
+              <input type="text" class="form-control" id="userSystem" formControlName="userSystem">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="affectedEntity" class="form-label">Affected Entity</label>
+          <textarea class="form-control" id="affectedEntity" formControlName="affectedEntity"></textarea>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="iPAddress" class="form-label">IP Address</label>
+              <input type="text" class="form-control" id="iPAddress" formControlName="iPAddress">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="userAgent" class="form-label">User Agent</label>
+              <input type="text" class="form-control" id="userAgent" formControlName="userAgent">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="statusOutcome" class="form-label">Status Outcome</label>
+              <input type="text" class="form-control" id="statusOutcome" formControlName="statusOutcome">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="additionalMetadata" class="form-label">Additional Metadata</label>
+          <input type="text" class="form-control" id="additionalMetadata" formControlName="additionalMetadata">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+    </div>
+  </div>
+</div>

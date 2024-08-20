@@ -1,0 +1,16 @@
+/* dashboard.component.css */
+
+.dashboard-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .chart-container, .card-container {
+    width: 45%;
+  }
+  
+  h2 {
+    color: #4297f3;
+  }
+  

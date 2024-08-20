@@ -1,0 +1,266 @@
+<!-- <h1>Supplier Form</h1>
+<form [formGroup]="supplierForm" (ngSubmit)="submitForm()">
+    <mat-grid-list cols="3" rowHeight="4:1">
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="name" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>contactName</mat-label>
+                    <input matInput formControlName="contactName" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>contactTitle</mat-label>
+                    <input matInput formControlName="contactTitle" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>phoneNumber</mat-label>
+                    <input matInput formControlName="phoneNumber" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>emailAddress</mat-label>
+                    <textarea matInput formControlName="emailAddress"></textarea>
+                </mat-form-field>
+            </div>
+
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>address</mat-label>
+                    <textarea matInput formControlName="address"></textarea>
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>billingAddress</mat-label>
+                    <input matInput formControlName="billingAddress" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>paymentTerms</mat-label>
+                    <input matInput formControlName="paymentTerms" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>paymentMethod</mat-label>
+                    <input matInput formControlName="paymentMethod" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>tin</mat-label>
+                    <input matInput formControlName="tin" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>website</mat-label>
+                    <input matInput formControlName="website" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>productCategories</mat-label>
+                    <input matInput formControlName="productCategories" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>supplierRating</mat-label>
+                    <input matInput formControlName="supplierRating" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>agreements</mat-label>
+                    <input matInput formControlName="agreements" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>preferredSupplier</mat-label>
+                    <input matInput formControlName="preferredSupplier" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>leadTime</mat-label>
+                    <input matInput formControlName="leadTime" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Minimum Order Quantity</mat-label>
+                    <input matInput formControlName="minimumOrderQuantity" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+
+    </mat-grid-list>
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form> -->
+
+
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header text-center">
+            <h1>Supplier Form</h1>
+        </div>
+        <div class="card-body p-5">
+            <form [formGroup]="supplierForm" (ngSubmit)="submitForm()">
+                <div class="row">
+                    <div class="col">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" formControlName="name">
+                    </div>
+                    <div class="col">
+                        <label for="contactName" class="form-label">Contact Name</label>
+                        <input type="text" class="form-control" id="contactName" formControlName="contactName">
+                    </div>
+                    <div class="col">
+                        <label for="contactTitle" class="form-label">Contact Title</label>
+                        <input type="text" class="form-control" id="contactTitle" formControlName="contactTitle">
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col">
+                        <label for="phoneNumber" class="form-label">Phone Number</label>
+                        <input type="number" class="form-control" id="phoneNumber" formControlName="phoneNumber">
+                    </div>
+
+                    <div class="col">
+                        <label for="emailAddress" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" formControlName="emailAddress">
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col">
+                        <label for="address" class="form-label">Address</label>
+                        <textarea class="form-control" id="address" formControlName="address"></textarea>
+                    </div>
+                    <div class="col">
+                        <label for="billingAddress" class="form-label">Billing Address</label>
+                        <input type="text" class="form-control" id="billingAddress" formControlName="billingAddress">
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col">
+                        <label for="paymentTerms" class="form-label">Payment Terms</label>
+                        <input type="text" class="form-control" id="paymentTerms" formControlName="paymentTerms">
+                    </div>
+                    <div class="col">
+                        <label for="paymentMethod" class="form-label">Payment Method</label>
+                        <input type="text" class="form-control" id="paymentMethod" formControlName="paymentMethod">
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col">
+                        <label for="tin" class="form-label">TIN</label>
+                        <input type="number" class="form-control" id="tin" formControlName="tin">
+                    </div>
+                    <div class="col">
+                        <label for="website" class="form-label">Website</label>
+                        <input type="text" class="form-control" id="website" formControlName="website">
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col">
+                        <label for="productCategories" class="form-label">Product Categories</label>
+                        <input type="text" class="form-control" id="productCategories"
+                            formControlName="productCategories">
+                    </div>
+                    <div class="col">
+                        <label for="supplierRating" class="form-label">Supplier Rating</label>
+                        <input type="text" class="form-control" id="supplierRating" formControlName="supplierRating">
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col">
+                        <label for="agreements" class="form-label">Agreements</label>
+                        <input type="text" class="form-control" id="agreements" formControlName="agreements">
+                    </div>
+                    <div class="col">
+                        <label for="preferredSupplier" class="form-label">Preferred Supplier</label>
+                        <input type="text" class="form-control" id="preferredSupplier"
+                            formControlName="preferredSupplier">
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col">
+                        <label for="leadTime" class="form-label">Lead Time</label>
+                        <input type="text" class="form-control" id="leadTime" formControlName="leadTime">
+                    </div>
+                    <div class="col">
+                        <label for="minimumOrderQuantity" class="form-label">Minimum Order Quantity</label>
+                        <input type="text" class="form-control" id="minimumOrderQuantity"
+                            formControlName="minimumOrderQuantity">
+                    </div>
+                </div>
+
+                <button class="btn btn-primary mt-4" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

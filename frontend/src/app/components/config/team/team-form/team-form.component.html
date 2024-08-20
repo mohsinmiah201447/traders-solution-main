@@ -1,0 +1,59 @@
+<!-- <h1>Team Form</h1>
+<form [formGroup]="teamForm" (ngSubmit)="submitForm()">
+    <mat-grid-list cols="1" rowHeight="10:1">
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="name" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Leader</mat-label>
+                    <input matInput formControlName="leader" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="input-container">
+                <mat-form-field>
+                    <mat-label>Members</mat-label>
+                    <input matInput formControlName="members" />
+                </mat-form-field>
+            </div>
+        </mat-grid-tile>
+
+
+    </mat-grid-list>
+
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+</form> -->
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header text-center">
+            <h1>Team Form</h1>
+        </div>
+        <div class="card-body p-5">
+            <form [formGroup]="teamForm" (ngSubmit)="submitForm()">
+                <div class="form-group">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" formControlName="name">
+                </div>
+                <div class="form-group">
+                    <label for="leader" class="form-label">Leader</label>
+                    <input type="text" class="form-control" id="leader" formControlName="leader">
+                </div>
+                <div class="form-group">
+                    <label for="members" class="form-label">Members</label>
+                    <input type="text" class="form-control" id="members" formControlName="members">
+                </div>
+
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

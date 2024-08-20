@@ -1,0 +1,61 @@
+<div style="display: flex; justify-content: space-between;">
+  <h2>AuditTrail List</h2>
+</div>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="timestamp">
+      <th mat-header-cell *matHeaderCellDef>timestamp</th>
+      <td mat-cell *matCellDef="let element"> {{ element.timestamp }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="actionEventType">
+      <th mat-header-cell *matHeaderCellDef>actionEventType</th>
+      <td mat-cell *matCellDef="let element"> {{ element.actionEventType }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="userSystem">
+      <th mat-header-cell *matHeaderCellDef> userSystem </th>
+      <td mat-cell *matCellDef="let element"> {{ element.userSystem }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="affectedEntity">
+      <th mat-header-cell *matHeaderCellDef> affectedEntity </th>
+      <td mat-cell *matCellDef="let element"> {{ element.affectedEntity }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="iPAddress">
+      <th mat-header-cell *matHeaderCellDef> iPAddress </th>
+      <td mat-cell *matCellDef="let element"> {{ element.iPAddress }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="userAgent">
+      <th mat-header-cell *matHeaderCellDef> userAgent </th>
+      <td mat-cell *matCellDef="let element"> {{ element.userAgent }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="statusOutcome">
+      <th mat-header-cell *matHeaderCellDef> statusOutcome </th>
+      <td mat-cell *matCellDef="let element"> {{ element.statusOutcome }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="additionalMetadata">
+      <th mat-header-cell *matHeaderCellDef> additionalMetadata </th>
+      <td mat-cell *matCellDef="let element"> {{ element.additionalMetadata }} </td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Actions</th>
+      <td mat-cell *matCellDef="let i = index;">
+          <button mat-icon-button color="warn" (click)="delete(i)">
+              <mat-icon>delete</mat-icon>
+          </button>
+          <button mat-icon-button color="primary" (click)="edit(i)">
+              <mat-icon>edit</mat-icon>
+          </button>
+      </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

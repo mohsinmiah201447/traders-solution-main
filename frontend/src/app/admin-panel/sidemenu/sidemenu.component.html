@@ -1,0 +1,222 @@
+<mat-sidenav-container class="sidenav-container" *ngIf="config.shouldRun" [hasBackdrop]="config.hasBackdrop">
+    <mat-sidenav #sidenav [mode]="config.mode" [position]="config.position" [opened]="config.isOpened">
+        <div class="profile-content" color="primary">
+            <h2 matSubheader class="mt-2" style="color: aliceblue;">Horizon Trading</h2>
+        </div>
+
+        <div class="container menu-container">
+            <div class="sidenav">
+                <div class="menu-item" [routerLink]="'dashboard'">
+                    <mat-icon>dashboard</mat-icon>
+                    &nbsp; Dashboard
+                </div>
+                <div class="menu-item">
+                    <mat-icon>security</mat-icon>
+                    &nbsp; Authority
+                    <div class="submenu">
+                        <div class="submenu-item">Role
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'role-form'">Role Form</div>
+                                <div class="subsubmenu-item" [routerLink]="'role-list'">Role List</div>
+                            </div>
+                        </div>
+                        <div class="submenu-item">Permission
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'permission-form'">Permission-Form</div>
+                                <div class="subsubmenu-item" [routerLink]="'permission-list'">Permission-List</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <mat-icon>business</mat-icon>
+                    &nbsp; Project Configuration
+                    <div class="submenu">
+                        <div class="submenu-item">Customer
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'customer-form'">Customer-form</div>
+                                <div class="subsubmenu-item" [routerLink]="'customer-list'">Customer-list</div>
+                            </div>
+                        </div>
+                        <div class="submenu-item">Departments
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'departments-form'">Departments-form</div>
+                                <div class="subsubmenu-item" [routerLink]="'departments-list'">Departments-list</div>
+                            </div>
+                        </div>
+                        <div class="submenu-item">Employee
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'employee-form'">employee-form</div>
+                                <div class="subsubmenu-item" [routerLink]="'employee-list'">employee-list</div>
+                            </div>
+                        </div>
+                        <div class="submenu-item">Product
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'product-form'">Product-form</div>
+                                <div class="subsubmenu-item" [routerLink]="'product-list'">Product-list</div>
+                            </div>
+                        </div>
+                        <div class="submenu-item">Supplier
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'supplier-form'">Supplier-form</div>
+                                <div class="subsubmenu-item" [routerLink]="'supplier-list'">Supplier-list</div>
+                            </div>
+                        </div>
+                        <div class="submenu-item">Team
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'team-form'">Team-form</div>
+                                <div class="subsubmenu-item" [routerLink]="'team-list'">Team-list</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <mat-icon>business</mat-icon>
+                    &nbsp; Project Data
+                    <div class="submenu">
+                        <div class="submenu-item">Audit Trail
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'audittrail-form'">Audittrail-form</div>
+                                <div class="subsubmenu-item" [routerLink]="'audittrail-list'">Audittrail-list</div>
+                            </div>
+                        </div>
+                        <div class="submenu-item">Order
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'order-form'">Order-form</div>
+                                <div class="subsubmenu-item" [routerLink]="'order-list'">Order-list</div>
+                            </div>
+                        </div>
+                        <div class="submenu-item">Purchase
+                            <div class="subsubmenu">
+                                <div class="subsubmenu-item" [routerLink]="'purchase-form'">Purchase-form</div>
+                                <div class="subsubmenu-item" [routerLink]="'purchase-list'">Purchase-list</div>
+                            </div>
+                        </div>
+                        <div class="submenu-item">
+                                <div class="subsubmenu-item" [routerLink]="'invoice'">Invoice</div> 
+                            </div>
+                    </div>
+                </div>
+                <div class="menu-item" [routerLink]="'about'">
+                    <mat-icon>history</mat-icon>
+                    &nbsp; About
+                </div>
+                <div class="menu-item" [routerLink]="'contact'">
+                    <mat-icon>contacts</mat-icon>
+                    &nbsp; Contact
+                </div>
+            </div>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="page-body">
+            <div style="position: sticky; top: 0;">
+
+                <!-- <mat-toolbar style="background-color:  #963091;">
+                    <button mat-icon-button (click)="sidenav.toggle()" class="example-icon"
+                        aria-label="Example icon-button with menu icon">
+                        <mat-icon>menu</mat-icon>
+                    </button>
+                    <span>My App</span>
+                    <span class="header-content-spacer"></span>
+                    <button mat-icon-button>
+                        <mat-icon>favorite</mat-icon>
+                    </button>
+                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                        <mat-icon>share</mat-icon>
+                    </button>
+
+
+                </mat-toolbar> -->
+               
+                <mat-toolbar style="background-color:  #963091;">
+                    <mat-toolbar-row class="justify-content-between">
+                        <button mat-icon-button (click)="sidenav.toggle()" class="example-icon"
+                            aria-label="Example icon-button with menu icon" style="color: aliceblue;">
+                            <mat-icon>menu</mat-icon>
+                        </button> 
+                        <div style="color: aliceblue;"><b>Traders Solution App</b></div>
+                        <div class="row mr-2 ml-auto">
+                            
+                                    <button mat-button [matMenuTriggerFor]="menu"
+                                        class="user mt-2 d-flex align-items-center">
+                                        <button class="btn btn-danger"><b>Logout</b></button>
+                                        <!-- <mat-icon class="user-image-icon ml-1">keyboard_arrow_down</mat-icon> -->
+                                    </button>
+                                    <mat-menu #menu="matMenu">
+                                        <button mat-menu-item style="color: red;">
+                                            <mat-icon>exit_to_app</mat-icon>
+                                            Logout
+                                        </button>
+                                    </mat-menu>
+                               
+                            
+                        </div>
+                    </mat-toolbar-row>
+                </mat-toolbar>
+
+            </div>
+            <router-outlet></router-outlet>
+        </div>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+
+
+<!--
+<mat-sidenav-container class="sidenav-container" *ngIf="config.shouldRun" [hasBackdrop]="config.hasBackdrop">
+    <mat-sidenav #sidenav [mode]="config.mode" [position]="config.position" [opened]="config.isOpened">
+        <div class="profile-content" color="primary">
+            <img src="your-logo.png" alt="Logo" class="logo">
+            <h2 matSubheader class="mt-2">Traders Solution</h2>
+        </div>
+
+        <div class="menu-container">
+            <div class="sidenav">
+
+                <div class="menu-item" [routerLink]="'dashboard'">
+                    <mat-icon>dashboard</mat-icon>
+                    Dashboard
+                </div>
+
+                <div class="menu-item">
+                    <mat-icon>security</mat-icon>
+                    Authority
+                    <div class="submenu">
+                        <div class="submenu-item" [routerLink]="'role-form'">Role Form</div>
+                        <div class="submenu-item" [routerLink]="'role-list'">Role List</div>
+                        <div class="submenu-item" [routerLink]="'permission-form'">Permission Form</div>
+                        <div class="submenu-item" [routerLink]="'permission-list'">Permission List</div>
+                    </div>
+                </div>
+
+                Add more menu items as needed
+
+            </div>
+        </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <div class="page-body">
+            <mat-toolbar color="primary">
+                <button mat-icon-button (click)="sidenav.toggle()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <span class="header-content-spacer"></span>
+                <button mat-icon-button>
+                    <mat-icon>favorite</mat-icon>
+                </button>
+                <button mat-icon-button>
+                    <mat-icon>share</mat-icon>
+                </button>
+            </mat-toolbar>
+
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container> -->

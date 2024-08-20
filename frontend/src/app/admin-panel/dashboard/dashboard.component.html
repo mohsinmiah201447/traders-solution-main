@@ -1,0 +1,28 @@
+<!-- dashboard.component.html -->
+
+<div class="dashboard-container">
+    <div class="chart-container">
+      <div>
+        <h2>Monthly Sales</h2>
+      </div>
+      <canvas baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [legend]="barChartLegend"
+              >
+      </canvas>
+    </div>
+  
+    <div class="card-container">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Traders Solution</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Dashboard</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  
